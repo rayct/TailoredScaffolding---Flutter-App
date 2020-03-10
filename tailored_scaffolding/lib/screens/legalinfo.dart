@@ -84,8 +84,9 @@ class _LegalInfoState extends State<LegalInfo> {
           centerTitle: true ,title: const Text("Legal Information"),
         ),
         body: Container(
-          child: Builder(
-            builder: (context) => Column(
+          child: Center(
+            child: Builder(
+              builder: (context) => Column(
                   mainAxisAlignment: MainAxisAlignment.center,
 
   // ** BUTTON ONE ** //
@@ -127,13 +128,14 @@ class _LegalInfoState extends State<LegalInfo> {
                         MaterialPageRoute(
                           builder: (context) =>
                             PdfViewPage(path: assetPDFPath
+                            ),
                           ),
-                        ),
-                      );
-                    }
-                  },
-                )
-              ],
+                        );
+                      }
+                    },
+                  )
+                ],
+              ),
             ),
           ),
         ),
