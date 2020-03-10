@@ -4,11 +4,13 @@
 
 
 import 'dart:io';
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
 import '../widgets/pdf_viewer.dart';
+import '../widgets/main_drawer.dart';
 
 
 // ** Start of Root Code ** //
@@ -73,48 +75,66 @@ class _LegalInfoState extends State<LegalInfo> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
+    return SafeArea(
+      // debugShowCheckedModeBanner: false,
+      child: Scaffold(
+        endDrawer:
+      AppDrawer(),
         appBar: AppBar(
-          title: Text("Flutter PDF Tutorial"),
+          centerTitle: true ,title: const Text("Legal Information"),
         ),
-        body: Center(
+        body: Container(
           child: Builder(
             builder: (context) => Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    RaisedButton(
-                      color: Colors.amber,
-                      child: Text("Open from URL"),
-                      onPressed: () {
-                        if (urlPDFPath != null) {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      PdfViewPage(path: urlPDFPath)));
-                        }
-                      },
+
+  // ** BUTTON ONE ** //
+  children: <Widget>[
+    FlatButton(
+      color: Colors.black,
+        textColor: Colors.white,
+        padding: EdgeInsets.fromLTRB(55, 25, 55, 25),
+        //splashColor: Colors.grey[600],
+          child: Text("Complaints Policy", style: TextStyle(fontSize: 16)),
+            //Icon(Icons.photo_album),
+              onPressed: () {
+              //var urlPDFPath;
+              if (urlPDFPath != null) {
+                Navigator.push(context,
+                  MaterialPageRoute(
+                    builder: (context) =>
+                      PdfViewPage(path: urlPDFPath
                     ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    RaisedButton(
-                      color: Colors.cyan,
-                      child: Text("Open from Asset"),
-                      onPressed: () {
-                        if (assetPDFPath != null) {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      PdfViewPage(path: assetPDFPath)));
-                        }
-                      },
-                    )
-                  ],
-                ),
+                  ),
+                );
+              }
+            },
+          ),
+        // ** BUTTON TWO ** //
+        SizedBox(
+        height: 30,
+        ),
+          FlatButton(
+            color: Colors.black,
+              textColor: Colors.white,
+                padding: EdgeInsets.fromLTRB(60, 25, 60, 25),
+                //splashColor: Colors.grey[600],
+                  child: Text("Legal Disclaimer", style: TextStyle(fontSize: 16)),
+                    onPressed: () {
+                    //var urlMyPDFPath;
+                    if (assetPDFPath != null) {
+                      Navigator.push(context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                            PdfViewPage(path: assetPDFPath
+                          ),
+                        ),
+                      );
+                    }
+                  },
+                )
+              ],
+            ),
           ),
         ),
       ),
