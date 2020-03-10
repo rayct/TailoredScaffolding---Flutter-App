@@ -62,20 +62,19 @@ class _ImageGallery extends State<ImageGallery> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-      endDrawer: AppDrawer(),
-      appBar: AppBar(
-        centerTitle: true,
-        title: const Text(
-          "Portfolio Gallery",
-          style: TextStyle(color: Colors.white),
-        ),
-      ),
-      body: imagesList != null
-          ? new StaggeredGridView.countBuilder(
-              padding: const EdgeInsets.all(8.0),
-              crossAxisCount: 4,
-              itemCount: imagesList.length,
-              itemBuilder: (context, i) {
+          endDrawer: AppDrawer(),
+            appBar: AppBar(
+            centerTitle: true,
+              title: const Text("Portfolio Gallery",
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+            body: imagesList != null
+            ? new StaggeredGridView.countBuilder(
+                padding: const EdgeInsets.all(8.0),
+                crossAxisCount: 4,
+                itemCount: imagesList.length,
+                itemBuilder: (context, i) {
                 String imgPath = imagesList[i].data['url'];
                 return new Material(
                   elevation: 7.0,
@@ -108,12 +107,12 @@ class _ImageGallery extends State<ImageGallery> {
               },
               staggeredTileBuilder: (i) =>
                   new StaggeredTile.count(2, i.isEven ? 2 : 3),
-              mainAxisSpacing: 8.0,
-              crossAxisSpacing: 8.0,
-            )
-          : new Center(
-              child: new CircularProgressIndicator(),
-            ),
+                  mainAxisSpacing: 8.0,
+                crossAxisSpacing: 8.0,
+              )
+            : new Center(
+          child: new CircularProgressIndicator(),
+        ),
       )
     );
   }

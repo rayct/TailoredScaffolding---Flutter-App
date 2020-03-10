@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "533017448469",
+    "firebase_url": "https://tailored-scaffolding.firebaseio.com",
+    "project_id": "tailored-scaffolding",
+    "storage_bucket": "tailored-scaffolding.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:533017448469:android:0e623a9a62e6367072fe1c",
+        "android_client_info": {
+          "package_name": "tailoredscaffolding.tailored_scaffolding"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "533017448469-sora0uld7794f8abmi9k4ccjj06b2gsr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdnHKppadXPq1D8LyZ1ft5QxmARhuwPr0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "533017448469-sora0uld7794f8abmi9k4ccjj06b2gsr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "533017448469-ka4vu1vgnt76dgg4on16svhsbj7khd3o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "scaffolding"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
