@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>533017448469-ka4vu1vgnt76dgg4on16svhsbj7khd3o.apps.googleusercontent.com</string>
+	<string>533017448469-n127p73kv60b04v40l84rctu8npacs61.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.533017448469-ka4vu1vgnt76dgg4on16svhsbj7khd3o</string>
+	<string>com.googleusercontent.apps.533017448469-n127p73kv60b04v40l84rctu8npacs61</string>
 	<key>API_KEY</key>
 	<string>AIzaSyBRf5hzsX4yEq8cYTaKMQRczjGuUbk1IHI</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>scaffolding</string>
+	<string>tailoredscaffolding.tailoredScaffolding</string>
 	<key>PROJECT_ID</key>
 	<string>tailored-scaffolding</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:533017448469:ios:fc3a82d3ebbf8ad472fe1c</string>
+	<string>1:533017448469:ios:59f1483634c7ccb172fe1c</string>
 	<key>DATABASE_URL</key>
 	<string>https://tailored-scaffolding.firebaseio.com</string>
 </dict>
