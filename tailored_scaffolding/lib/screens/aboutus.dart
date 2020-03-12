@@ -2,11 +2,10 @@
 // Lead Developer/Software Engineer: Raymond Colin Turner.
 // Copyright © 2020: Ellatronix Ltd.
 
-//..Start of Root Code..//
+// ** Start of Root Code ** //
 
 
 import 'package:flutter/material.dart';
-//import 'package:url_launcher/url_launcher.dart';
 import '../widgets/main_drawer.dart';
 
 class AboutUs extends StatelessWidget {
@@ -29,7 +28,6 @@ class AboutUs extends StatelessWidget {
                 'Established in 2000\n'
                 'Tailored Scaffolding has since had a high interest in'
                 'terms of keeping up to date with latest State-of-the-art Scaffolding Technologies and trends. '
-                
                 'Versatility & applicability, supports-infrastructure, resources, experience, compared to other organisations in this business. '
                 'Tailored Scaffolding stress on effective innovation, economy, safety, speed of elevation right through to the dismantling of our scaffolding systems. '
                 'Our equipment is manufactured to international standards to maintain uniformity. In particular, a tailored scaffolding system is considered one of londons leading specialists. '
@@ -39,7 +37,7 @@ class AboutUs extends StatelessWidget {
             
               style: TextStyle(height: 1.7, fontSize: 14, letterSpacing: 0.0),
               softWrap: true,
-            ),
+              ),
             ),
           ),
         ),

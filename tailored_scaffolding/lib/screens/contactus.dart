@@ -2,7 +2,7 @@
 // Lead Developer/Software Engineer: Raymond Colin Turner.
 // Copyright © 2020: Ellatronix Ltd.
 
-//..Start of Root Code..//
+// ** Start of Root Code ** //
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import "package:url_launcher/url_launcher.dart";
