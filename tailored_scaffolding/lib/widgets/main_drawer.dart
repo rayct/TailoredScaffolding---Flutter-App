@@ -72,7 +72,7 @@ class AppDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            title: Text("Portfolio"),
+            title: Text("Image Gallery"),
             leading: Icon(Icons.photo_library),
             onTap: () {
               // Update the state of the app

@@ -65,7 +65,7 @@ class _ImageGallery extends State<ImageGallery> {
           endDrawer: AppDrawer(),
             appBar: AppBar(
             centerTitle: true,
-              title: const Text("Portfolio Gallery",
+              title: const Text("Image Gallery",
                 style: TextStyle(color: Colors.white),
               ),
             ),
