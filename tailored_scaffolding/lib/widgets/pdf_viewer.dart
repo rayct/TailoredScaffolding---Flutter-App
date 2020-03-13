@@ -48,13 +48,13 @@ class _PdfViewPageState extends State<PdfViewPage> {
         children: <Widget>[
           PDFView(
             filePath: widget.path,
-            autoSpacing: true,
+            autoSpacing: false,
             enableSwipe: true,
             pageSnap: true,
             swipeHorizontal: true,
-            nightMode: false,
-            onError: (e) {
-              print(e);
+            nightMode: false, 
+            onError: (error) {
+              print(error.toString());
             },
             onRender: (_pages) {
               setState(() {
@@ -65,10 +65,18 @@ class _PdfViewPageState extends State<PdfViewPage> {
             onViewCreated: (PDFViewController vc) {
               _pdfViewController = vc;
             },
+            // onViewCreated: (PDFViewController pdfViewController) {
+            //   _controller.complete(pdfViewController);
+            // },
+            // onPageChanged: (int page, int total) {
+            //   setState(() {});
+            // },
             onPageChanged: (int page, int total) {
-              setState(() {});
+              print('page change: $page/$total');
             },
-            onPageError: (page, e) {},
+            onPageError: (page, error) {
+              print('$page: ${error.toString()}');
+            },
             ),
             !pdfReady
               ? Center(
