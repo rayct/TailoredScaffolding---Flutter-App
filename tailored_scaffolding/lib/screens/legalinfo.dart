@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
+import 'package:printing/printing.dart';
 import '../widgets/pdf_viewer.dart';
 import '../widgets/main_drawer.dart';
 
@@ -50,11 +51,12 @@ class _LegalInfoState extends State<LegalInfo> {
       var data = await rootBundle.load(asset);
       var bytes = data.buffer.asUint8List();
       var dir = await getApplicationDocumentsDirectory();
-      File file = File("${dir.path}/legaldisclaimer-ts.pdf");
+      final File file = File("${dir.path}/legaldisclaimer-ts.pdf");
 
-      File assetFile = await file.writeAsBytes(bytes);
+      final File assetFile = await file.writeAsBytes(bytes);
       return assetFile;
     } catch (e) {
+      // Printing.printpdf(document:pdf);
       throw Exception("Error opening asset file");
     }
   }
@@ -65,6 +67,9 @@ class _LegalInfoState extends State<LegalInfo> {
       var bytes = data.bodyBytes;
       var dir = await getApplicationDocumentsDirectory();
       File file = File("${dir.path}/mypdfonline.pdf");
+      //final output = await getTemporaryDirectory();
+      //final file = File("${output.path}/example.pdf");
+      //await file.writeAsBytes(pdf.save());
 
       File urlFile = await file.writeAsBytes(bytes);
       return urlFile;

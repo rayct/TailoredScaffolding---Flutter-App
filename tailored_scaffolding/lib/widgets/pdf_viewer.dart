@@ -51,6 +51,7 @@ class _PdfViewPageState extends State<PdfViewPage> {
             autoSpacing: false,
             enableSwipe: true,
             pageSnap: true,
+            pageFling: false,
             swipeHorizontal: true,
             nightMode: false, 
             onError: (error) {

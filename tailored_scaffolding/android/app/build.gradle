@@ -41,7 +41,7 @@ android {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         multiDexEnabled true
         applicationId "tailoredscaffolding.tailored_scaffolding"
-        minSdkVersion 19
+        minSdkVersion 21
         targetSdkVersion 28
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
