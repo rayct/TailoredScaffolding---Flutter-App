@@ -5,11 +5,13 @@
 
 import 'dart:io';
 import 'dart:async';
+// import 'package:pdf/widgets.dart' as pdf;
+// import 'package:pdf/pdf.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
-import 'package:printing/printing.dart';
+// import 'package:printing/printing.dart';
 import '../widgets/pdf_viewer.dart';
 import '../widgets/main_drawer.dart';
 
@@ -67,16 +69,20 @@ class _LegalInfoState extends State<LegalInfo> {
       var bytes = data.bodyBytes;
       var dir = await getApplicationDocumentsDirectory();
       File file = File("${dir.path}/mypdfonline.pdf");
-      //final output = await getTemporaryDirectory();
-      //final file = File("${output.path}/example.pdf");
-      //await file.writeAsBytes(pdf.save());
-
       File urlFile = await file.writeAsBytes(bytes);
+
+      // final output = await getTemporaryDirectory();
+      // final file = File("${output.path}/complaints-ts.pdf");
+      // File urlFile = await file.writeAsBytes(pdf.save());
+      // await Printing.layoutPdf(
+      //   onLayout: (PdfPageFormat format) async => pdf.save());
+
       return urlFile;
     } catch (e) {
       throw Exception("Error opening url file");
     }
   }
+
 
   @override
   Widget build(BuildContext context) {
