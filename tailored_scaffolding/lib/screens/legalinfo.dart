@@ -94,34 +94,37 @@ class _LegalInfoState extends State<LegalInfo> {
         appBar: AppBar(
           centerTitle: true ,title: const Text("Legal Information"),
         ),
+        backgroundColor: Colors.white,
         body: Container(
           child: Center(
             child: Builder(
               builder: (context) => Column(
                   mainAxisAlignment: MainAxisAlignment.center,
+                  verticalDirection: VerticalDirection.down,
+                  crossAxisAlignment: CrossAxisAlignment.center,
 
-  // ** BUTTON ONE ** //
-  children: <Widget>[
-    FlatButton(
-      color: Colors.black,
-        textColor: Colors.white,
-        padding: EdgeInsets.fromLTRB(55, 25, 55, 25),
-        //splashColor: Colors.grey[600],
-          child: Text("Complaints Policy", style: TextStyle(fontSize: 16)),
-            //Icon(Icons.photo_album),
-              onPressed: () {
-              //var urlPDFPath;
-              if (urlPDFPath != null) {
-                Navigator.push(context,
-                  MaterialPageRoute(
-                    builder: (context) =>
-                      PdfViewPage(path: urlPDFPath
-                    ),
-                  ),
-                );
-              }
-            },
-          ),
+      // *** BUTTON ONE *** //
+      children: <Widget>[
+        FlatButton(
+          color: Colors.white,
+            textColor: Colors.black,
+              padding: EdgeInsets.fromLTRB(55, 25, 55, 25),
+              //–splashColor: Colors.grey[600],
+                child: Text("Complaints Policy", style: TextStyle(fontSize: 16)),
+                //Icon(Icons.photo_album),
+                  onPressed: () {
+                  //var urlPDFPath;
+                  if (urlPDFPath != null) {
+                    Navigator.push(context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                          PdfViewPage(path: urlPDFPath
+                        ),
+                      ),
+                    );
+                  }
+                },
+              ),
         // ** BUTTON TWO ** //
         SizedBox(
         height: 30,
@@ -133,7 +136,7 @@ class _LegalInfoState extends State<LegalInfo> {
                 //splashColor: Colors.grey[600],
                   child: Text("Legal Disclaimer", style: TextStyle(fontSize: 16)),
                     onPressed: () {
-                    //var urlMyPDFPath;
+                  //var urlMyPDFPath;
                     if (assetPDFPath != null) {
                       Navigator.push(context,
                         MaterialPageRoute(

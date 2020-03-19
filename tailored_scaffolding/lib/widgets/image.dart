@@ -75,8 +75,10 @@ class _ImageInputState extends State<ImageInput> {
 //============== Button One (Add Photo) ===============//
 @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Wrap(
+    return Container(
+      child: Column(
+            verticalDirection: VerticalDirection.down,
+            //crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           FlatButton(
             child: Icon(Icons.add_a_photo, color: Colors.black,),
