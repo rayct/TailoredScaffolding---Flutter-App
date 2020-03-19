@@ -87,13 +87,13 @@ class _LandingScreenState extends State<LandingScreen> {
 
                     //................. Name Text Field ....................//
 
-                    //SizedBox(
-                    //height: 10.0,
-                    //),
+                    // SizedBox(
+                    // height: 50.0,
+                    // ),
                     Container(
                       //margin: EdgeInsets.fromLTRB(40.0, 8.0, 40.0, 8.0),
-                      padding: EdgeInsets.all(5.0),
-                      width: 320,
+                      padding: EdgeInsets.all(7.0),
+                      width: 200,
                       child: SafeArea(
                         child: TextFormField(
                           keyboardType: TextInputType.text,
@@ -116,12 +116,12 @@ class _LandingScreenState extends State<LandingScreen> {
                                   borderSide:
                                       BorderSide(color: Color(0xffFD9609))
                                   //borderSide: BorderSide(color: Colors.deepOrange)
-                                  ),
+                                ),
                               labelText: "Name."
                             ),
-                          ),
-                       ),
-                     ),
+                         ),
+                      ),
+                    ),
 
                     //................ Email Text Field ..................//
 
@@ -129,8 +129,8 @@ class _LandingScreenState extends State<LandingScreen> {
                     //height: 05.0,
                     //),
                     Container(
-                      padding: EdgeInsets.all(5.0),
-                      width: 320,
+                      padding: EdgeInsets.all(7.0),
+                      width: 200,
                       child: SafeArea(
                         child: TextFormField(
                           keyboardType: TextInputType.emailAddress,
@@ -151,9 +151,9 @@ class _LandingScreenState extends State<LandingScreen> {
                                   borderSide:
                                       BorderSide(color: Colors.deepOrange)),
                               labelText: "Email."),
+                          ),
                         ),
                       ),
-                    ),
 
                     //................ Phone Text Field ..................//
 
@@ -162,8 +162,8 @@ class _LandingScreenState extends State<LandingScreen> {
                     //),
 
                     Container(
-                      padding: EdgeInsets.all(5.0),
-                      width: 320,
+                      padding: EdgeInsets.all(7.0),
+                      width: 200,
                       child: SafeArea(
                         child: TextFormField(
                           keyboardType: TextInputType.phone,
@@ -191,7 +191,7 @@ class _LandingScreenState extends State<LandingScreen> {
                     ),
 
                     SizedBox(
-                      height: 30.0,
+                      height: 50.0,
                     ),
 
                     ImageInput(),

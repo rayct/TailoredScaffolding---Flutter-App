@@ -36,7 +36,6 @@ class _ImageInputState extends State<ImageInput> {
       Navigator.pop(context);
     });
   }
-
    void _openImagePicker(BuildContext context) {
     showModalBottomSheet(
       context: context, 
@@ -94,13 +93,8 @@ class _ImageInputState extends State<ImageInput> {
             onPressed: ()  {
               _openImagePicker(context);
             },
-            //child: Wrap(
-              //child: Text("Add Image"),
- 
-            //mainAxisAlignment: MainAxisAlignment.center,
-            //crossAxisAlignment: CrossAxisAlignment.center,
-            
           ),
+
         //=============== Image Display ===============//
         //SizedBox(height: 10.0),
         _imageFile == null
