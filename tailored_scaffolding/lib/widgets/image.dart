@@ -46,7 +46,7 @@ class _ImageInputState extends State<ImageInput> {
         child: Column(children: [
         Text("Pick an Image", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0)),
           SizedBox(
-            height: 10.0,
+            height: 20.0,
             ),
             FlatButton(
               textColor: Theme.of(context).primaryColor,
@@ -66,12 +66,15 @@ class _ImageInputState extends State<ImageInput> {
           ),
         );
       }
-    );
-  }
-//--------------- Image Picker Modal ------------------// 
+    );      
+  } 
+
+  // =============== Image Picker Modal =============== //
 
 
-//============== Button One (Add Photo) ===============//
+
+  //============== FABButton and BottomAppBar (Add Photo) ===============//
+
 @override
   Widget build(BuildContext context) {
     return Container(
@@ -94,19 +97,17 @@ class _ImageInputState extends State<ImageInput> {
               _openImagePicker(context);
             },
           ),
-
-        //=============== Image Display ===============//
-        //SizedBox(height: 10.0),
-        _imageFile == null
-          ? Text('' , style: TextStyle(color:Colors.black,),)
-          : Image.file(
-            _imageFile,
-            fit: BoxFit.cover,                   
-            height: 200.0,
-            //width: 280.0,
-            width: MediaQuery.of(context).size.width,
-            alignment: Alignment.topCenter,
-          ),
+          
+          _imageFile == null
+            ? Text('' , style: TextStyle(color:Colors.black,),)
+            : Image.file(
+              _imageFile,
+              fit: BoxFit.cover,                   
+              height: 300.0,
+              width: 280.0,
+              //width: MediaQuery.of(context).size.width,
+              alignment: Alignment.center,
+            ),
         ],
       ),
     );
@@ -114,6 +115,81 @@ class _ImageInputState extends State<ImageInput> {
 }
 
 
+
+// @override
+// Widget build(BuildContext context) {
+//   return new Scaffold(
+//     //appBar: AppBar(title: const Text('Bottom App Bar')),
+//     floatingActionButtonLocation: 
+//       FloatingActionButtonLocation.centerDocked,
+//     floatingActionButton: FloatingActionButton(
+//       child: const Icon(Icons.add), onPressed: () {
+//         _openImagePicker(context);
+//       },
+//     ),
+//     bottomNavigationBar: BottomAppBar(
+//       shape: CircularNotchedRectangle(),
+//       notchMargin: 4.0,
+//       child: new Row(
+//         mainAxisSize: MainAxisSize.max,
+//         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//         children: <Widget>[
+//           //IconButton(icon: Icon(Icons.menu), onPressed: () {},),
+//           //IconButton(icon: Icon(Icons.search), onPressed: () {},),
+
+
+
+// Widget build(BuildContext context) {
+//   return new Scaffold(
+//     appBar: AppBar(title: const Text('Bottom App Bar')),
+//     floatingActionButtonLocation: 
+//       FloatingActionButtonLocation.centerDocked,
+//     floatingActionButton: FloatingActionButton(
+//       child: const Icon(Icons.add), onPressed: () {
+//         _openImagePicker(context);
+//       },),
+//       bottomNavigationBar: BottomAppBar(
+//       shape: CircularNotchedRectangle(),
+//       notchMargin: 4.0,
+//       child: new Row(
+//         mainAxisSize: MainAxisSize.max,
+//         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//         children: <Widget>[
+//           IconButton(icon: Icon(Icons.menu), onPressed: () {},),
+//           IconButton(icon: Icon(Icons.search), onPressed: () {},),
+//         ],
+//       ),
+//     ),
+//   );
+// }
+
+
+// @override
+  // Widget build(BuildContext context) {
+  //   return new Scaffold(
+  //   appBar: AppBar(
+  //   //title: Text(''),
+  //   ),
+  //     floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+  //     floatingActionButton: FloatingActionButton(
+  //       onPressed: () {
+  //         _openImagePicker(context);
+  //     },
+  //     child: const Icon(Icons.camera, color: Colors.black),
+  //     elevation: 2.0,
+  //     ),
+  //     bottomNavigationBar: BottomAppBar(
+  //       shape: CircularNotchedRectangle(),
+  //       color: Colors.yellow,
+  //       notchMargin: 4.0,
+  //       child: new Row(
+  //         mainAxisSize: MainAxisSize.max,
+  //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+  //         children: <Widget>[
+  //             IconButton(icon: Icon(Icons.menu), onPressed: () {},),
+  //             IconButton(icon: Icon(Icons.send), onPressed: () {},),
+
+    
   //================================= TO DO ==============================//
   //================= Implement the Image Picker Save Directory===========//
   //--------------------- Image Picker Save Directory --------------------//
@@ -126,4 +202,28 @@ class _ImageInputState extends State<ImageInput> {
             //final appDir = await syspaths.getApplicationDocoumentsDirectory();
             //final fileName path.basename(imageFile.path);
             //final savedImage = await imageFile.copy('${appDir.path}/$fileName');
-            //}
+
+
+// @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//       child: Column(
+//             //verticalDirection: VerticalDirection.down,
+//             //crossAxisAlignment: CrossAxisAlignment.center,
+//         children: <Widget>[
+//           FlatButton(
+//             child: Icon(Icons.add_a_photo, color: Colors.black,),
+//             shape: RoundedRectangleBorder(
+//             borderRadius: BorderRadius.circular(14.0),
+//             ),
+//             color: Color(0xffFFCE00),
+//             textColor: Colors.black,
+//             padding: EdgeInsets.fromLTRB(110.0, 20.0, 110.0, 20.0),
+//             //padding: EdgeInsets.all(40.0),
+
+//             //=== OnPressed Wrapped in An Anonymous ===//
+//             onPressed: ()  {
+//               _openImagePicker(context);
+//             },
+//           ),
+//         }

@@ -91,7 +91,6 @@ class _LandingScreenState extends State<LandingScreen> {
                     // height: 50.0,
                     // ),
                     Container(
-                      //margin: EdgeInsets.fromLTRB(40.0, 8.0, 40.0, 8.0),
                       padding: EdgeInsets.all(7.0),
                       width: 200,
                       child: SafeArea(
@@ -190,9 +189,9 @@ class _LandingScreenState extends State<LandingScreen> {
                       ),
                     ),
 
-                    SizedBox(
-                      height: 50.0,
-                    ),
+                    // SizedBox(
+                    //   height: 50.0,
+                    // ),
 
                     ImageInput(),
 
