@@ -75,6 +75,7 @@ class _ImageInputState extends State<ImageInput> {
 
   //============== FABButton and BottomAppBar (Add Photo) ===============//
 
+
 @override
   Widget build(BuildContext context) {
     return Container(
@@ -97,7 +98,11 @@ class _ImageInputState extends State<ImageInput> {
               _openImagePicker(context);
             },
           ),
-          
+
+          SizedBox(
+            height: 30.0,
+            ),
+
           _imageFile == null
             ? Text('' , style: TextStyle(color:Colors.black,),)
             : Image.file(
