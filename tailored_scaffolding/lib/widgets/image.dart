@@ -8,6 +8,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+//import '../ui_elements/camera_fab.dart';
 //import 'package:path/path.dart';
 //import 'package:async/async.dart';
 //import '../widgets/main_drawer.dart';
@@ -24,7 +25,7 @@ class ImageInput extends StatefulWidget {
     // ************** TO DO **************** //
     // ********** ADD IMAGE CROP *********** //
 
-//------------- Image Picker Modal -------------// 
+// ============ Image Picker Modal============ //
 class _ImageInputState extends State<ImageInput> {
   File _imageFile;
 
@@ -71,9 +72,7 @@ class _ImageInputState extends State<ImageInput> {
 
   // =============== Image Picker Modal =============== //
 
-
-
-  //============== FABButton and BottomAppBar (Add Photo) ===============//
+  //============== ImagePickerButton (Add Photo) ===============//
 
 
 @override
@@ -83,28 +82,28 @@ class _ImageInputState extends State<ImageInput> {
             verticalDirection: VerticalDirection.down,
             //crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          FlatButton(
+          OutlineButton(
             child: Icon(Icons.add_a_photo, color: Colors.black,),
             shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(14.0),
             ),
-            color: Color(0xffFFCE00),
-            textColor: Colors.black,
-            padding: EdgeInsets.fromLTRB(110.0, 20.0, 110.0, 20.0),
-            //padding: EdgeInsets.all(40.0),
-
-            //=== OnPressed Wrapped in An Anonymous ===//
+            padding: EdgeInsets.fromLTRB(110.0, 110.0, 110.0, 110.0),
+          borderSide: BorderSide(
+            color: Colors.black, style: BorderStyle.solid, //Style of the border
+            width: 1.2, //width of the border
+          ),
+          
+          //=== OnPressed Wrapped in An Anonymous ===//
             onPressed: ()  {
               _openImagePicker(context);
             },
           ),
-
           SizedBox(
             height: 30.0,
             ),
 
           _imageFile == null
-            ? Text('' , style: TextStyle(color:Colors.black,),)
+            ? Text(' Image Goes Here' , style: TextStyle(color:Colors.black,),)
             : Image.file(
               _imageFile,
               fit: BoxFit.cover,                   
@@ -113,86 +112,25 @@ class _ImageInputState extends State<ImageInput> {
               //width: MediaQuery.of(context).size.width,
               alignment: Alignment.center,
             ),
-        ],
-      ),
-    );
+          ],
+        ),
+      );
+    }
   }
-}
+            
+
+            
 
 
 
-// @override
-// Widget build(BuildContext context) {
-//   return new Scaffold(
-//     //appBar: AppBar(title: const Text('Bottom App Bar')),
-//     floatingActionButtonLocation: 
-//       FloatingActionButtonLocation.centerDocked,
-//     floatingActionButton: FloatingActionButton(
-//       child: const Icon(Icons.add), onPressed: () {
-//         _openImagePicker(context);
-//       },
-//     ),
-//     bottomNavigationBar: BottomAppBar(
-//       shape: CircularNotchedRectangle(),
-//       notchMargin: 4.0,
-//       child: new Row(
-//         mainAxisSize: MainAxisSize.max,
-//         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//         children: <Widget>[
-//           //IconButton(icon: Icon(Icons.menu), onPressed: () {},),
-//           //IconButton(icon: Icon(Icons.search), onPressed: () {},),
+  
 
 
 
-// Widget build(BuildContext context) {
-//   return new Scaffold(
-//     appBar: AppBar(title: const Text('Bottom App Bar')),
-//     floatingActionButtonLocation: 
-//       FloatingActionButtonLocation.centerDocked,
-//     floatingActionButton: FloatingActionButton(
-//       child: const Icon(Icons.add), onPressed: () {
-//         _openImagePicker(context);
-//       },),
-//       bottomNavigationBar: BottomAppBar(
-//       shape: CircularNotchedRectangle(),
-//       notchMargin: 4.0,
-//       child: new Row(
-//         mainAxisSize: MainAxisSize.max,
-//         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//         children: <Widget>[
-//           IconButton(icon: Icon(Icons.menu), onPressed: () {},),
-//           IconButton(icon: Icon(Icons.search), onPressed: () {},),
-//         ],
-//       ),
-//     ),
-//   );
-// }
 
 
-// @override
-  // Widget build(BuildContext context) {
-  //   return new Scaffold(
-  //   appBar: AppBar(
-  //   //title: Text(''),
-  //   ),
-  //     floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-  //     floatingActionButton: FloatingActionButton(
-  //       onPressed: () {
-  //         _openImagePicker(context);
-  //     },
-  //     child: const Icon(Icons.camera, color: Colors.black),
-  //     elevation: 2.0,
-  //     ),
-  //     bottomNavigationBar: BottomAppBar(
-  //       shape: CircularNotchedRectangle(),
-  //       color: Colors.yellow,
-  //       notchMargin: 4.0,
-  //       child: new Row(
-  //         mainAxisSize: MainAxisSize.max,
-  //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-  //         children: <Widget>[
-  //             IconButton(icon: Icon(Icons.menu), onPressed: () {},),
-  //             IconButton(icon: Icon(Icons.send), onPressed: () {},),
+
+
 
     
   //================================= TO DO ==============================//

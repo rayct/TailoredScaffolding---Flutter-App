@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../widgets/main_drawer.dart';
 import '../widgets/image.dart';
-
+//import '../ui_elements/camera_fab.dart';
 //import 'submit_contact.dart';
 //import 'package:intl/intl.dart';
 //import 'dart:io';
@@ -201,6 +201,7 @@ class _LandingScreenState extends State<LandingScreen> {
                     //       child: const Text('Submit'),
                     //       onPressed: _submitForm,
                     //     )),
+                    
               ],
             ),
           ),
