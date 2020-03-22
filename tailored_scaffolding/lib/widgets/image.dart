@@ -58,7 +58,7 @@ class _ImageInputState extends State<ImageInput> {
             ),
             FlatButton(
               textColor: Theme.of(context).primaryColor,
-              child: Text("Use Gallery"),
+              child: Text("From Gallery"),
               onPressed: ()  {
                 _getImage(context, ImageSource.gallery);
                 },
@@ -80,18 +80,18 @@ class _ImageInputState extends State<ImageInput> {
     return Container(
       child: Column(
             verticalDirection: VerticalDirection.down,
-            //crossAxisAlignment: CrossAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           OutlineButton(
             child: Icon(Icons.add_a_photo, color: Colors.black,),
-            shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(14.0),
+              shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(14.0),
+              ),
+              padding: EdgeInsets.fromLTRB(110.0, 110.0, 110.0, 110.0),
+              borderSide: BorderSide(
+              color: Colors.black, style: BorderStyle.solid, //Style of the border
+              width: 1.2, //width of the border
             ),
-            padding: EdgeInsets.fromLTRB(110.0, 110.0, 110.0, 110.0),
-          borderSide: BorderSide(
-            color: Colors.black, style: BorderStyle.solid, //Style of the border
-            width: 1.2, //width of the border
-          ),
           
           //=== OnPressed Wrapped in An Anonymous ===//
             onPressed: ()  {
@@ -103,7 +103,7 @@ class _ImageInputState extends State<ImageInput> {
             ),
 
           _imageFile == null
-            ? Text(' Image Goes Here' , style: TextStyle(color:Colors.black,),)
+            ? Text(' Attach an Image ' , style: TextStyle(color:Colors.black, fontWeight: FontWeight.bold, fontSize: 18),)
             : Image.file(
               _imageFile,
               fit: BoxFit.cover,                   
@@ -118,21 +118,6 @@ class _ImageInputState extends State<ImageInput> {
     }
   }
             
-
-            
-
-
-
-  
-
-
-
-
-
-
-
-
-    
   //================================= TO DO ==============================//
   //================= Implement the Image Picker Save Directory===========//
   //--------------------- Image Picker Save Directory --------------------//
