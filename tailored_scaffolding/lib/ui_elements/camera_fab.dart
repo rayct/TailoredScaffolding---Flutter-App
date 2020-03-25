@@ -4,6 +4,8 @@
 
 // ** Start of Root Code ** //
 
+// == Bottom App Bar With Notched FABButton == //
+
 
 //import 'dart:io';
 import 'package:flutter/material.dart';
@@ -15,13 +17,20 @@ class CameraFAB extends StatefulWidget {
   }
 }
 
-
 class _CameraFABState extends State<CameraFAB> {
   @override
-    Widget build(BuildContext context) {
-      return FloatingActionButton(
-        onPressed:() {},
-        child: Icon(Icons.camera),
-    );
-  }
+  Widget build(BuildContext context) {
+    return new Scaffold(
+      bottomNavigationBar: BottomAppBar(
+      child: new Row(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          IconButton(icon: Icon(Icons.menu), onPressed: () {},),
+          IconButton(icon: Icon(Icons.search), onPressed: () {},),
+        ],
+      ),
+    ),
+  );
+ }
 }

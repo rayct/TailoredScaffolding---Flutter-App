@@ -62,6 +62,7 @@ class _LandingScreenState extends State<LandingScreen> {
           style: TextStyle(color: Colors.white),
         ),
       ),
+      
       backgroundColor: Colors.white,
       body: Center(
         child: SafeArea(
@@ -87,11 +88,18 @@ class _LandingScreenState extends State<LandingScreen> {
 
                     //................. Name Text Field ....................//
 
-                    // SizedBox(
-                    // height: 50.0,
-                    // ),
+                    SizedBox(
+                    height: 50.0,
+                    ),
+                    ImageInput(),
+                    // Placeholder(
+
+                    //     fallbackHeight: 200,
+                    //     fallbackWidth: 100,
+                        
+                    //     ),
                     Container(
-                      padding: EdgeInsets.all(7.0),
+                      padding: EdgeInsets.all(9.0),
                       width: 200,
                       child: SafeArea(
                         child: TextFormField(
@@ -128,7 +136,7 @@ class _LandingScreenState extends State<LandingScreen> {
                     //height: 05.0,
                     //),
                     Container(
-                      padding: EdgeInsets.all(7.0),
+                      padding: EdgeInsets.all(9.0),
                       width: 200,
                       child: SafeArea(
                         child: TextFormField(
@@ -149,7 +157,8 @@ class _LandingScreenState extends State<LandingScreen> {
                                   //borderSide: BorderSide(color: Color(0xffFD9609))
                                   borderSide:
                                       BorderSide(color: Colors.deepOrange)),
-                              labelText: "Email."),
+                              labelText: "Email."
+                            ),
                           ),
                         ),
                       ),
@@ -161,7 +170,7 @@ class _LandingScreenState extends State<LandingScreen> {
                     //),
 
                     Container(
-                      padding: EdgeInsets.all(7.0),
+                      padding: EdgeInsets.all(9.0),
                       width: 200,
                       child: SafeArea(
                         child: TextFormField(
@@ -184,16 +193,16 @@ class _LandingScreenState extends State<LandingScreen> {
                                   //borderSide: const BorderSide(color: Color(0xffFD9609))
                                   borderSide:
                                       BorderSide(color: Colors.deepOrange)),
-                              labelText: "Phone."),
-                        ),
+                              labelText: "Phone."
+                              ),
+                            ),
+                         ),
                       ),
-                    ),
 
                     // SizedBox(
                     //   height: 50.0,
                     // ),
 
-                    ImageInput(),
 
                     // new Container(
                     //     padding: const EdgeInsets.only(left: 40.0, top: 20.0),
@@ -210,4 +219,3 @@ class _LandingScreenState extends State<LandingScreen> {
     );
   }
 }
-
