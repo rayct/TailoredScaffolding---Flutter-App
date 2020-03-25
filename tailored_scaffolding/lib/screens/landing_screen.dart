@@ -203,14 +203,24 @@ class _LandingScreenState extends State<LandingScreen> {
                     //   height: 50.0,
                     // ),
 
-
-                    // new Container(
-                    //     padding: const EdgeInsets.only(left: 40.0, top: 20.0),
-                    //     child: new RaisedButton(
-                    //       child: const Text('Submit'),
-                    //       onPressed: _submitForm,
-                    //     )),
-                    
+                     Container(
+                      child: Column(
+                        children: <Widget>[
+                          FlatButton(
+                            child: Icon(Icons.send, color: Colors.black,),
+                            child: Text("Submit"),
+                            shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(14.0),
+                            ),
+                            color: Color(0xffFFCE00),
+                            textColor: Colors.black,
+                        //padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
+                        padding: EdgeInsets.all(20.0),
+                          onPressed: () {},
+                      ),
+                    ),
+                  ),
+                ],
               ],
             ),
           ),
