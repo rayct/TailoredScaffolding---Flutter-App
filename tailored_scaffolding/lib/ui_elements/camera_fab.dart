@@ -1,6 +1,6 @@
 // App Design and Code Author: Raymond Colin Turner 
 // Lead Developer/Software Engineer: Raymond Colin Turner.
-// Copyright © 2020: Ellatronix Ltd.
+// Copyright © 2020 Ellatronix Ltd.
 
 // ** Start of Root Code ** //
 
@@ -9,6 +9,7 @@
 
 //import 'dart:io';
 import 'package:flutter/material.dart';
+
 
 class CameraFAB extends StatefulWidget {
   @override
@@ -28,9 +29,9 @@ class _CameraFABState extends State<CameraFAB> {
         children: <Widget>[
           IconButton(icon: Icon(Icons.menu), onPressed: () {},),
           IconButton(icon: Icon(Icons.search), onPressed: () {},),
-        ],
+          ],
+        ),
       ),
-    ),
-  );
- }
+    );
+  }
 }

@@ -1,20 +1,23 @@
 // App Design and Code Author: Raymond Colin Turner 
 // Lead Developer/Software Engineer: Raymond Colin Turner.
-// Copyright © 2020: Ellatronix Ltd.
+// Copyright © 2020 Ellatronix Ltd.
 
 // ** Start of Root Code ** //
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:tailored_scaffolding/widgets/image.dart';
 import '../widgets/main_drawer.dart';
-import '../widgets/image.dart';
-//import '../ui_elements/camera_fab.dart';
-//import 'submit_contact.dart';
-//import 'package:intl/intl.dart';
+//import '../widgets/image_picker.dart';
 //import 'dart:io';
 //import 'dart:async';
+//import 'submit_contact.dart';
 //import 'contact_server.dart';
+//import '../widgets/image.dart';
+//import 'package:intl/intl.dart';
+//import '../ui_elements/camera_fab.dart';
+//import 'package:tailored_scaffolding/ui_elements/camera_fab.dart';
 
 //................ App Drawer Set to Right Side .............................//
 class LandingScreen extends StatefulWidget {
@@ -43,12 +46,17 @@ final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 class _LandingScreenState extends State<LandingScreen> {
   final GlobalKey<FormState> _formKey = new GlobalKey<FormState>();
 
+
+
   @override
   Widget build(BuildContext context) {
     //var _submitForm;
     var newSubmitContact;
-    return new Scaffold(
+    return Scaffold(
+      
       key: _scaffoldKey,
+      
+      
       //return SafeArea(
       //child: Scaffold(
       //------------------------------- Drawer -----------------------------------//
@@ -59,12 +67,40 @@ class _LandingScreenState extends State<LandingScreen> {
         centerTitle: true,
         title: const Text(
           "Quick Quote",
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: Colors.white
+          ), 
         ),
       ),
+      bottomNavigationBar: BottomAppBar(
+        shape: CircularNotchedRectangle(),
+        color: Colors.white,
+        notchMargin: 2.0,
+        clipBehavior: Clip.antiAlias,
+      child: new Row(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          IconButton(icon: Icon(Icons.home), onPressed: () {},),
+          IconButton(icon: Icon(Icons.send), onPressed: () {},),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed:() {
+          
+        },
+        child: Icon(Icons.add_a_photo,color: Colors.black,),
+        //backgroundColor: Colors.orange,
+        backgroundColor: Color(0xffFFCE00),
+      
+        //textColor: Colors.black,
+      ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+
       
       backgroundColor: Colors.white,
-      body: Center(
+      body: new Center(
+        
         child: SafeArea(
             child: new Form(
                 key: _formKey,
@@ -72,32 +108,11 @@ class _LandingScreenState extends State<LandingScreen> {
                 child: new ListView(
                   //mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    //======================= TO DO =========================//
-                    //................ Image Field Display ..................//
-
-                    //Container(
-                    //padding: EdgeInsets.all(10.0),
-                    //margin: EdgeInsets.all(20.0),
-                    //width:  200.0,
-                    //height: 100.0,
-                    //child: Center(
-                    //child: new Image.asset('assets/images/TSLogo/logo.png'),
-                    //),
-                    //),
-                    //),
-
-                    //................. Name Text Field ....................//
-
+                    
                     SizedBox(
                     height: 50.0,
                     ),
-                    ImageInput(),
-                    // Placeholder(
-
-                    //     fallbackHeight: 200,
-                    //     fallbackWidth: 100,
-                        
-                    //     ),
+                    
                     Container(
                       padding: EdgeInsets.all(9.0),
                       width: 200,
@@ -129,6 +144,7 @@ class _LandingScreenState extends State<LandingScreen> {
                          ),
                       ),
                     ),
+                    
 
                     //................ Email Text Field ..................//
 
@@ -196,36 +212,52 @@ class _LandingScreenState extends State<LandingScreen> {
                               labelText: "Phone."
                               ),
                             ),
-                         ),
-                      ),
+                      
+                            
+  
+
+
+                          ),
+                         
+                   ),
 
                     // SizedBox(
                     //   height: 50.0,
                     // ),
 
-                     Container(
-                      child: Column(
-                        children: <Widget>[
-                          FlatButton(
-                            child: Icon(Icons.send, color: Colors.black,),
-                            child: Text("Submit"),
-                            shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(14.0),
-                            ),
-                            color: Color(0xffFFCE00),
-                            textColor: Colors.black,
-                        //padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
-                        padding: EdgeInsets.all(20.0),
-                          onPressed: () {},
-                      ),
-                    ),
-                  ),
-                ],
+                     ImageInput(),
+
+
+
+
+  
+
               ],
             ),
           ),
         ),
-      ),
+        ),
+      //),
     );
   }
 }
+
+          //],
+        //),
+      //),
+    //],
+
+                    //  Container(
+                    //   child: Column(
+                    //     children: <Widget>[
+                    //       FlatButton(
+                    //         child: Icon(Icons.send, color: Colors.black,),
+                    //         //child: Text("Submit"),
+                    //         shape: RoundedRectangleBorder(
+                    //         borderRadius: BorderRadius.circular(14.0),
+                    //         ),
+                    //         color: Color(0xffFFCE00),
+                    //         textColor: Colors.black,
+                    //     //padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
+                    //     padding: EdgeInsets.all(20.0),
+                    //       onPressed: () {},

@@ -79,31 +79,27 @@ class _ImageInputState extends State<ImageInput> {
   Widget build(BuildContext context) {
     return Container(
       child: Column(
-            verticalDirection: VerticalDirection.down,
+            //verticalDirection: VerticalDirection.down,
             crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          OutlineButton(
+          FlatButton(
             child: Icon(Icons.add_a_photo, color: Colors.black,),
-              shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(14.0),
-              ),
-              padding: EdgeInsets.fromLTRB(110.0, 110.0, 110.0, 110.0),
-              borderSide: BorderSide(
-              color: Colors.black, style: BorderStyle.solid, //Style of the border
-              width: 1.2, //width of the border
+            shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(14.0),
             ),
-          
-          //=== OnPressed Wrapped in An Anonymous ===//
+            color: Color(0xffFFCE00),
+            textColor: Colors.black,
+            padding: EdgeInsets.fromLTRB(110.0, 20.0, 110.0, 20.0),
+            //=== OnPressed Wrapped in An Anonymous ===//
             onPressed: ()  {
               _openImagePicker(context);
             },
           ),
-          SizedBox(
-            height: 30.0,
-            ),
+
+
 
           _imageFile == null
-            ? Text(' Attach an Image ' , style: TextStyle(color:Colors.black, fontWeight: FontWeight.bold, fontSize: 18),)
+            ? Text('' , style: TextStyle(color:Colors.black, fontWeight: FontWeight.bold, fontSize: 18),)
             : Image.file(
               _imageFile,
               fit: BoxFit.cover,                   
@@ -117,6 +113,11 @@ class _ImageInputState extends State<ImageInput> {
       );
     }
   }
+
+          // SizedBox(
+          //   height: 30.0,
+          //   ),
+
             
   //================================= TO DO ==============================//
   //================= Implement the Image Picker Save Directory===========//
@@ -132,26 +133,3 @@ class _ImageInputState extends State<ImageInput> {
             //final savedImage = await imageFile.copy('${appDir.path}/$fileName');
 
 
-// @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       child: Column(
-//             //verticalDirection: VerticalDirection.down,
-//             //crossAxisAlignment: CrossAxisAlignment.center,
-//         children: <Widget>[
-//           FlatButton(
-//             child: Icon(Icons.add_a_photo, color: Colors.black,),
-//             shape: RoundedRectangleBorder(
-//             borderRadius: BorderRadius.circular(14.0),
-//             ),
-//             color: Color(0xffFFCE00),
-//             textColor: Colors.black,
-//             padding: EdgeInsets.fromLTRB(110.0, 20.0, 110.0, 20.0),
-//             //padding: EdgeInsets.all(40.0),
-
-//             //=== OnPressed Wrapped in An Anonymous ===//
-//             onPressed: ()  {
-//               _openImagePicker(context);
-//             },
-//           ),
-//         }
