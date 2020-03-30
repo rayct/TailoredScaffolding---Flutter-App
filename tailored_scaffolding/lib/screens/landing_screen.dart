@@ -7,7 +7,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+//import 'package:image_picker/image_picker.dart';
 import 'package:tailored_scaffolding/widgets/image.dart';
+//import 'package:tailored_scaffolding/widgets/image.dart';
 import '../widgets/main_drawer.dart';
 //import '../widgets/image_picker.dart';
 //import 'dart:io';
@@ -87,7 +89,7 @@ class _LandingScreenState extends State<LandingScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed:() {
-          
+          _openImagePicker(context);
         },
         child: Icon(Icons.add_a_photo,color: Colors.black,),
         //backgroundColor: Colors.orange,
@@ -225,7 +227,7 @@ class _LandingScreenState extends State<LandingScreen> {
                     //   height: 50.0,
                     // ),
 
-                     ImageInput(),
+                     //ImageInput(),
 
 
 
