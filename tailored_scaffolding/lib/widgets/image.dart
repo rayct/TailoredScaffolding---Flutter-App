@@ -85,11 +85,11 @@ class _ImageInputState extends State<ImageInput> {
           FlatButton(
             child: Icon(Icons.add_a_photo, color: Colors.black,),
             shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(14.0),
+            borderRadius: BorderRadius.circular(100.0),
             ),
             color: Color(0xffFFCE00),
             textColor: Colors.black,
-            padding: EdgeInsets.fromLTRB(110.0, 20.0, 110.0, 20.0),
+            padding: EdgeInsets.all(50),
             //=== OnPressed Wrapped in An Anonymous ===//
             onPressed: ()  {
               _openImagePicker(context);

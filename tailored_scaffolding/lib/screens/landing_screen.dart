@@ -8,7 +8,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 //import 'package:image_picker/image_picker.dart';
-import 'package:tailored_scaffolding/widgets/image.dart';
+//import 'package:tailored_scaffolding/widgets/image.dart';
 //import 'package:tailored_scaffolding/widgets/image.dart';
 import '../widgets/main_drawer.dart';
 //import '../widgets/image_picker.dart';
@@ -73,23 +73,9 @@ class _LandingScreenState extends State<LandingScreen> {
           ), 
         ),
       ),
-      bottomNavigationBar: BottomAppBar(
-        shape: CircularNotchedRectangle(),
-        color: Colors.white,
-        notchMargin: 2.0,
-        clipBehavior: Clip.antiAlias,
-      child: new Row(
-        mainAxisSize: MainAxisSize.max,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          IconButton(icon: Icon(Icons.home), onPressed: () {},),
-          IconButton(icon: Icon(Icons.send), onPressed: () {},),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
+       floatingActionButton: FloatingActionButton(
         onPressed:() {
-          _openImagePicker(context);
+          
         },
         child: Icon(Icons.add_a_photo,color: Colors.black,),
         //backgroundColor: Colors.orange,
@@ -97,7 +83,9 @@ class _LandingScreenState extends State<LandingScreen> {
       
         //textColor: Colors.black,
       ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+
+        
 
       
       backgroundColor: Colors.white,
@@ -214,52 +202,54 @@ class _LandingScreenState extends State<LandingScreen> {
                               labelText: "Phone."
                               ),
                             ),
-                      
-                            
-  
-
-
-                          ),
-                         
-                   ),
+                          ),      
+                        ),
 
                     // SizedBox(
                     //   height: 50.0,
                     // ),
 
                      //ImageInput(),
-
-
-
-
-  
-
               ],
             ),
           ),
         ),
-        ),
-      //),
+      ),
     );
   }
 }
 
-          //],
-        //),
-      //),
-    //],
+      //],
+    //),
+  //),
+//],
 
-                    //  Container(
-                    //   child: Column(
-                    //     children: <Widget>[
-                    //       FlatButton(
-                    //         child: Icon(Icons.send, color: Colors.black,),
-                    //         //child: Text("Submit"),
-                    //         shape: RoundedRectangleBorder(
-                    //         borderRadius: BorderRadius.circular(14.0),
-                    //         ),
-                    //         color: Color(0xffFFCE00),
-                    //         textColor: Colors.black,
-                    //     //padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
-                    //     padding: EdgeInsets.all(20.0),
-                    //       onPressed: () {},
+//  Container(
+//   child: Column(
+//     children: <Widget>[
+//       FlatButton(
+//         child: Icon(Icons.send, color: Colors.black,),
+//         //child: Text("Submit"),
+//         shape: RoundedRectangleBorder(
+//         borderRadius: BorderRadius.circular(14.0),
+//         ),
+//         color: Color(0xffFFCE00),
+//         textColor: Colors.black,
+//     //padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
+//     padding: EdgeInsets.all(20.0),
+//       onPressed: () {},
+
+// bottomNavigationBar: BottomAppBar(
+//   shape: CircularNotchedRectangle(),
+//   color: Colors.white,
+//   notchMargin: 2.0,
+//   clipBehavior: Clip.antiAlias,
+// child: new Row(
+//   mainAxisSize: MainAxisSize.max,
+//   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//   children: <Widget>[
+//     IconButton(icon: Icon(Icons.home), onPressed: () {},),
+//     IconButton(icon: Icon(Icons.share), onPressed: () {},),
+//     ],
+//   ),
+// ),
