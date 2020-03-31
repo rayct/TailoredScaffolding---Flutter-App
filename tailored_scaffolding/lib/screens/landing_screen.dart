@@ -73,21 +73,17 @@ class _LandingScreenState extends State<LandingScreen> {
           ), 
         ),
       ),
-       floatingActionButton: FloatingActionButton(
-        onPressed:() {
-          
-        },
-        child: Icon(Icons.add_a_photo,color: Colors.black,),
-        //backgroundColor: Colors.orange,
-        backgroundColor: Color(0xffFFCE00),
-      
-        //textColor: Colors.black,
-      ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-
+      floatingActionButton: FloatingActionButton(
+      onPressed:() {
         
+      },
+      child: Icon(Icons.add_a_photo,color: Colors.black,),
+      //backgroundColor: Colors.orange,
+      backgroundColor: Color(0xffFFCE00),
+    
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
 
-      
       backgroundColor: Colors.white,
       body: new Center(
         
