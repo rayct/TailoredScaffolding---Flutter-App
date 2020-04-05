@@ -7,8 +7,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-//import 'package:image_picker/image_picker.dart';
-//import 'package:tailored_scaffolding/widgets/image.dart';
+import 'package:tailored_scaffolding/widgets/image_input.dart';
 //import 'package:tailored_scaffolding/widgets/image.dart';
 import '../widgets/main_drawer.dart';
 //import '../widgets/image_picker.dart';
@@ -73,16 +72,34 @@ class _LandingScreenState extends State<LandingScreen> {
           ), 
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-      onPressed:() {
+      // floatingActionButton: FloatingActionButton(
+      // onPressed:() {
         
-      },
-      child: Icon(Icons.add_a_photo,color: Colors.black,),
-      //backgroundColor: Colors.orange,
-      backgroundColor: Color(0xffFFCE00),
+      // },
+      // child: Icon(Icons.add_a_photo,color: Colors.black,),
+      // //backgroundColor: Colors.orange,
+      // backgroundColor: Color(0xffFFCE00),
     
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      // ),
+      // floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+  //       ),
+  //     );
+  //   }
+
+  //   Future imagepicker() async {
+  //     var image = await ImagePicker.pickImage(source: ImageSource.gallery);
+  //     setState(() {
+  //       _image = image;
+  //     });
+  //   }
+  // }
+
+
+
+
+
+
+
 
       backgroundColor: Colors.white,
       body: new Center(
@@ -205,7 +222,8 @@ class _LandingScreenState extends State<LandingScreen> {
                     //   height: 50.0,
                     // ),
 
-                     //ImageInput(),
+                     ImageInput(),
+                     
               ],
             ),
           ),

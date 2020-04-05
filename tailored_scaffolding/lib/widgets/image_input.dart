@@ -1,8 +1,8 @@
-// App Design and Code Author: Raymond Colin Turner 
-// Lead Developer/Software Engineer: Raymond Colin Turner.
-// Copyright © 2020: Ellatronix Ltd.
+// // App Design and Code Author: Raymond Colin Turner 
+// // Lead Developer/Software Engineer: Raymond Colin Turner.
+// // Copyright © 2020: Ellatronix Ltd.
 
-// ** Start of Root Code ** //
+// // ** Start of Root Code ** //
 
 
 import 'dart:io';
@@ -70,9 +70,9 @@ class _ImageInputState extends State<ImageInput> {
     );      
   } 
 
-  // =============== Image Picker Modal =============== //
+//   // =============== Image Picker Modal =============== //
 
-  //============== ImagePickerButton (Add Photo) ===============//
+//   //============== ImagePickerButton (Add Photo) ===============//
 
 
 @override
@@ -85,18 +85,16 @@ class _ImageInputState extends State<ImageInput> {
           FlatButton(
             child: Icon(Icons.add_a_photo, color: Colors.black,),
             shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(100.0),
+            borderRadius: BorderRadius.circular(50.0),
             ),
             color: Color(0xffFFCE00),
             textColor: Colors.black,
-            padding: EdgeInsets.all(50),
+            padding: EdgeInsets.all(30),
             //=== OnPressed Wrapped in An Anonymous ===//
             onPressed: ()  {
               _openImagePicker(context);
             },
           ),
-
-
 
           _imageFile == null
             ? Text('' , style: TextStyle(color:Colors.black, fontWeight: FontWeight.bold, fontSize: 18),)
@@ -114,22 +112,21 @@ class _ImageInputState extends State<ImageInput> {
     }
   }
 
-          // SizedBox(
-          //   height: 30.0,
-          //   ),
+//           // SizedBox(
+//           //   height: 30.0,
+//           //   ),
 
             
-  //================================= TO DO ==============================//
-  //================= Implement the Image Picker Save Directory===========//
-  //--------------------- Image Picker Save Directory --------------------//
-  //================================= TO DO ==============================//
-            //);
-            //setState(() {
-                //_storedImage = imageFile;
-            //});
+//   //================================= TO DO ==============================//
+//   //================= Implement the Image Picker Save Directory===========//
+//   //--------------------- Image Picker Save Directory --------------------//
+//   //================================= TO DO ==============================//
+//             //);
+//             //setState(() {
+//                 //_storedImage = imageFile;
+//             //});
 
-            //final appDir = await syspaths.getApplicationDocoumentsDirectory();
-            //final fileName path.basename(imageFile.path);
-            //final savedImage = await imageFile.copy('${appDir.path}/$fileName');
-
-
+//             //final appDir = await syspaths.getApplicationDocoumentsDirectory();
+//             //final fileName path.basename(imageFile.path);
+//             //final savedImage = await imageFile.copy('${appDir.path}/$fileName')
+//             //;
