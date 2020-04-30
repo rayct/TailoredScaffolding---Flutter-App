@@ -94,13 +94,6 @@ class _LandingScreenState extends State<LandingScreen> {
   //   }
   // }
 
-
-
-
-
-
-
-
       backgroundColor: Colors.white,
       body: new Center(
         
