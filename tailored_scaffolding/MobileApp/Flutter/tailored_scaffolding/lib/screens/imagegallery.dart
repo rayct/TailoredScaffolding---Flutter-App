@@ -1,4 +1,4 @@
-// App Design and Code Author: Raymond Colin Turner 
+// App Design and Code Author: Raymond Colin Turner
 // Lead Developer/Software Engineer: Raymond Colin Turner.
 // Copyright © 2020: Ellatronix Ltd.
 
@@ -11,7 +11,6 @@ import '../screens/fullscreen_image.dart';
 import '../widgets/main_drawer.dart';
 import 'dart:async';
 
-
 // *************** TO DO ************** //
 // ***** Implement Pinch and Zoom ***** //
 
@@ -23,12 +22,10 @@ class ImageGallery extends StatefulWidget {
 class _ImageGallery extends State<ImageGallery> {
   //Uint8List imagesList;
   StreamSubscription<QuerySnapshot> subscription;
-  List <DocumentSnapshot> imagesList;
+  List<DocumentSnapshot> imagesList;
 
   final CollectionReference collectionReference =
       Firestore.instance.collection("images");
-
-
 
   // @override
   // void initState(){
@@ -54,27 +51,28 @@ class _ImageGallery extends State<ImageGallery> {
 
   @override
   void dispose() {
-        subscription?.cancel();
-        super.dispose();
-      }
-                  
+    subscription?.cancel();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-          endDrawer: AppDrawer(),
-            appBar: AppBar(
-            centerTitle: true,
-              title: const Text("Image Gallery",
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
-            body: imagesList != null
-            ? new StaggeredGridView.countBuilder(
-                padding: const EdgeInsets.all(8.0),
-                crossAxisCount: 4,
-                itemCount: imagesList.length,
-                itemBuilder: (context, i) {
+      endDrawer: AppDrawer(),
+      appBar: AppBar(
+        centerTitle: true,
+        title: const Text(
+          "Image Gallery",
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
+      body: imagesList != null
+          ? new StaggeredGridView.countBuilder(
+              padding: const EdgeInsets.all(8.0),
+              crossAxisCount: 4,
+              itemCount: imagesList.length,
+              itemBuilder: (context, i) {
                 String imgPath = imagesList[i].data['url'];
                 return new Material(
                   elevation: 7.0,
@@ -89,8 +87,7 @@ class _ImageGallery extends State<ImageGallery> {
                           context,
                           new MaterialPageRoute(
                               builder: (context) =>
-                                  new FullScreenImage(imgPath))
-                      );
+                                  new FullScreenImage(imgPath)));
                     },
                     child: new Hero(
                       tag: imgPath,
@@ -107,17 +104,15 @@ class _ImageGallery extends State<ImageGallery> {
               },
               staggeredTileBuilder: (i) =>
                   new StaggeredTile.count(2, i.isEven ? 2 : 3),
-                  mainAxisSpacing: 8.0,
-                crossAxisSpacing: 8.0,
-              )
-            : new Center(
-          child: new CircularProgressIndicator(),
-        ),
-      )
-    );
+              mainAxisSpacing: 8.0,
+              crossAxisSpacing: 8.0,
+            )
+          : new Center(
+              child: new CircularProgressIndicator(),
+            ),
+    ));
   }
 }
-
 
 // @override
 //   void initState(){

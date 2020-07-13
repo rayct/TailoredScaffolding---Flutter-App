@@ -1,4 +1,4 @@
-// // App Design and Code Author: Raymond Colin Turner 
+// // App Design and Code Author: Raymond Colin Turner
 // // Lead Developer/Software Engineer: Raymond Colin Turner.
 // // Copyright © 2020 Ellatronix Ltd.
 
@@ -6,10 +6,8 @@
 
 // // == Bottom App Bar With Notched FABButton == //
 
-
 // //import 'dart:io';
 // import 'package:flutter/material.dart';
-
 
 // class CameraFAB extends StatefulWidget {
 //   @override

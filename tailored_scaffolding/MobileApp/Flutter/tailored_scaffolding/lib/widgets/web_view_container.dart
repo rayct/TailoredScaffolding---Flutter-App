@@ -1,4 +1,4 @@
-// App Design and Code Author: Raymond Colin Turner 
+// App Design and Code Author: Raymond Colin Turner
 // Lead Developer/Software Engineer: Raymond Colin Turner.
 // Copyright © 2020: Ellatronix Ltd.
 
@@ -19,26 +19,24 @@ class WebViewContainer extends StatefulWidget {
 
 class _WebViewContainerState extends State<WebViewContainer> {
   var _url;
-    final _key = UniqueKey();
+  final _key = UniqueKey();
 
-    _WebViewContainerState(this._url);
+  _WebViewContainerState(this._url);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+        appBar: AppBar(),
         endDrawer: AppDrawer(),
-          body: Column(
-            children: [
-              Expanded(
-                child: WebView(
+        body: Column(
+          children: [
+            Expanded(
+              child: WebView(
                   key: _key,
                   javascriptMode: JavascriptMode.unrestricted,
-                  initialUrl: _url
+                  initialUrl: _url),
             ),
-          ),
-        ],
-      )
-    );
+          ],
+        ));
   }
 }

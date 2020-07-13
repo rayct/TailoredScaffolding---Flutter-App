@@ -1,13 +1,11 @@
-// // App Design and Code Author: Raymond Colin Turner 
+// // App Design and Code Author: Raymond Colin Turner
 // // Lead Developer/Software Engineer: Raymond Colin Turner.
 // // Copyright © 2020: Ellatronix Ltd.
-
 
 // import 'package:share/share.dart';
 // import 'package:flutter/material.dart';
 // import 'package:flutter/foundation.dart';
 // import 'package:flutter_pdfview/flutter_pdfview.dart';
-
 
 // // ** Start of Root Code ** //
 
@@ -24,7 +22,6 @@
 //   int _currentPage = 0;
 //   bool pdfReady = false;
 //   PDFViewController _pdfViewController;
-
 
 //   @override
 //   Widget build(BuildContext context) {
