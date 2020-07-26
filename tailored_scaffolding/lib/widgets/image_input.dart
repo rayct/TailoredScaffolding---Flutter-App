@@ -117,21 +117,3 @@ class _ImageInputState extends State<ImageInput> {
     );
   }
 }
-
-//           // SizedBox(
-//           //   height: 30.0,
-//           //   ),
-
-//   //================================= TO DO ==============================//
-//   //================= Implement the Image Picker Save Directory===========//
-//   //--------------------- Image Picker Save Directory --------------------//
-//   //================================= TO DO ==============================//
-//             //);
-//             //setState(() {
-//                 //_storedImage = imageFile;
-//             //});
-
-//             //final appDir = await syspaths.getApplicationDocoumentsDirectory();
-//             //final fileName path.basename(imageFile.path);
-//             //final savedImage = await imageFile.copy('${appDir.path}/$fileName')
-//             //;
