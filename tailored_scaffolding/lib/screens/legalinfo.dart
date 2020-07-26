@@ -1,7 +1,6 @@
-// App Design and Code Author: Raymond Colin Turner 
+// App Design and Code Author: Raymond Colin Turner
 // Lead Developer/Software Engineer: Raymond Colin Turner.
 // Copyright © 2020: Ellatronix Ltd.
-
 
 import 'dart:io';
 import 'dart:async';
@@ -14,7 +13,6 @@ import 'package:path_provider/path_provider.dart';
 // import 'package:printing/printing.dart';
 import '../widgets/pdf_viewer.dart';
 import '../widgets/main_drawer.dart';
-
 
 // ** Start of Root Code ** //
 
@@ -40,7 +38,9 @@ class _LegalInfoState extends State<LegalInfo> {
       });
     });
 
-    getFileFromUrl("https://firebasestorage.googleapis.com/v0/b/tailored-scaffolding.appspot.com/o/documents%2Fcomplaints-ts.pdf?alt=media&token=9d1116cc-34e2-475b-9f32-32e596273793").then((f) {
+    getFileFromUrl(
+            "https://firebasestorage.googleapis.com/v0/b/tailored-scaffolding.appspot.com/o/documents%2Fcomplaints-ts.pdf?alt=media&token=9d1116cc-34e2-475b-9f32-32e596273793")
+        .then((f) {
       setState(() {
         urlPDFPath = f.path;
         print(urlPDFPath);
@@ -83,66 +83,66 @@ class _LegalInfoState extends State<LegalInfo> {
     }
   }
 
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       // debugShowCheckedModeBanner: false,
       child: Scaffold(
-        endDrawer:
-      AppDrawer(),
+        endDrawer: AppDrawer(),
         appBar: AppBar(
-          centerTitle: true ,title: const Text("Legal Information"),
+          centerTitle: true,
+          title: const Text("Legal Information"),
         ),
         backgroundColor: Colors.white,
         body: Container(
           child: Center(
             child: Builder(
               builder: (context) => Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  verticalDirection: VerticalDirection.down,
-                  crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                verticalDirection: VerticalDirection.down,
+                crossAxisAlignment: CrossAxisAlignment.center,
 
-      // *** BUTTON ONE *** //
-      children: <Widget>[
-        FlatButton(
-          color: Colors.white,
-            textColor: Colors.black,
-              padding: EdgeInsets.fromLTRB(55, 25, 55, 25),
-              //–splashColor: Colors.grey[600],
-                child: Text("Complaints Policy", style: TextStyle(fontSize: 16)),
-                //Icon(Icons.photo_album),
-                  onPressed: () {
-                  //var urlPDFPath;
-                  if (urlPDFPath != null) {
-                    Navigator.push(context,
-                      MaterialPageRoute(
-                        builder: (context) =>
-                          PdfViewPage(path: urlPDFPath
-                        ),
-                      ),
-                    );
-                  }
-                },
-              ),
-        // ** BUTTON TWO ** //
-        SizedBox(
-        height: 30,
-        ),
-          FlatButton(
-            color: Colors.black,
-              textColor: Colors.white,
-                padding: EdgeInsets.fromLTRB(60, 25, 60, 25),
-                //splashColor: Colors.grey[600],
-                  child: Text("Legal Disclaimer", style: TextStyle(fontSize: 16)),
+                // *** BUTTON ONE *** //
+                children: <Widget>[
+                  FlatButton(
+                    color: Colors.white,
+                    textColor: Colors.black,
+                    padding: EdgeInsets.fromLTRB(55, 25, 55, 25),
+                    //–splashColor: Colors.grey[600],
+                    child: Text("Complaints Policy",
+                        style: TextStyle(fontSize: 16)),
+                    //Icon(Icons.photo_album),
                     onPressed: () {
-                  //var urlMyPDFPath;
-                    if (assetPDFPath != null) {
-                      Navigator.push(context,
-                        MaterialPageRoute(
-                          builder: (context) =>
-                            PdfViewPage(path: assetPDFPath
-                            ),
+                      //var urlPDFPath;
+                      if (urlPDFPath != null) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => PdfViewPage(path: urlPDFPath),
+                          ),
+                        );
+                      }
+                    },
+                  ),
+                  // ** BUTTON TWO ** //
+                  SizedBox(
+                    height: 30,
+                  ),
+                  FlatButton(
+                    color: Colors.black,
+                    textColor: Colors.white,
+                    padding: EdgeInsets.fromLTRB(60, 25, 60, 25),
+                    //splashColor: Colors.grey[600],
+                    child: Text("Legal Disclaimer",
+                        style: TextStyle(fontSize: 16)),
+                    onPressed: () {
+                      //var urlMyPDFPath;
+                      if (assetPDFPath != null) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                PdfViewPage(path: assetPDFPath),
                           ),
                         );
                       }

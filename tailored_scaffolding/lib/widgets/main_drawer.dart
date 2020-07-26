@@ -1,5 +1,4 @@
-
-// App Design and Code Author: Raymond Colin Turner 
+// App Design and Code Author: Raymond Colin Turner
 // Lead Developer/Software Engineer: Raymond Colin Turner.
 // Copyright © 2020: Ellatronix Ltd.
 
@@ -15,14 +14,15 @@ import '../screens/legalinfo.dart';
 import '../screens/help.dart';
 // import '../widgets/full_pdf_viewer.dart';
 
-
 // ** Start of Root Code ** //
 
 const String _AccountEmail = 'info@tailoredscaffolding.com';
 
 class AppDrawer extends StatelessWidget {
   final String title;
-  AppDrawer({Key key, this.title, bool centerTitle, AppBar appBar, Container body}) : super(key: key);
+  AppDrawer(
+      {Key key, this.title, bool centerTitle, AppBar appBar, Container body})
+      : super(key: key);
 
   String get pathPDF => null;
 
@@ -52,8 +52,8 @@ class AppDrawer extends StatelessWidget {
                 decoration: BoxDecoration(
                     //color: Colors.indigo[900]
                     color: Color(0xff242B3E)),
-                ),
-                decoration: BoxDecoration(
+              ),
+              decoration: BoxDecoration(
                   //color: Colors.indigo[900]
                   color: Color(0xff242B3E))),
 
@@ -125,8 +125,8 @@ class AppDrawer extends StatelessWidget {
             onTap: () {
               // Update the state of the app
               Navigator.pop(context);
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => LegalInfo()));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => LegalInfo()));
               // Then close the drawer
             },
           ),

@@ -1,4 +1,4 @@
-// App Design and Code Author: Raymond Colin Turner 
+// App Design and Code Author: Raymond Colin Turner
 // Lead Developer/Software Engineer: Raymond Colin Turner.
 // Copyright © 2020: Ellatronix Ltd.
 
@@ -11,29 +11,29 @@ class Help extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      endDrawer: new AppDrawer(),       //new Line
+      endDrawer: new AppDrawer(), //new Line
       appBar: new AppBar(
-        centerTitle: true ,title: const Text("Help", style: TextStyle(color: Colors.white)),
+        centerTitle: true,
+        title: const Text("Help", style: TextStyle(color: Colors.white)),
         //centerTitle: true ,title: const Text("Help Page" ,style: const TextStyle(color: Color(0xffFD9609)),),
-      
       ),
       backgroundColor: Colors.white,
       body: new Center(
         child: SafeArea(
-          child: Text('Help Page' ,style: TextStyle(color: Colors.deepOrangeAccent, fontSize: 25.0,),),
+          child: Text(
+            'Help Page',
+            style: TextStyle(
+              color: Colors.deepOrangeAccent,
+              fontSize: 25.0,
+            ),
+          ),
         ),
       ),
     );
   }
 }
 
-
-
-
-
-
-
-// App Design and Code Author: Raymond Colin Turner 
+// App Design and Code Author: Raymond Colin Turner
 // Lead Developer/Software Engineer: Raymond Colin Turner.
 // Copyright © 2020: Ellatronix Ltd.
 
@@ -49,18 +49,17 @@ class Help extends StatelessWidget {
 //   Widget build(BuildContext context) {
 //     return SafeArea(
 //       child: Scaffold(
-//         endDrawer: 
+//         endDrawer:
 //          AppDrawer(),
-//         appBar: 
+//         appBar:
 //           AppBar(
 //           //centerTitle: true ,title: const Text("Quick Quote" ,style: TextStyle(color: Color(0xffFD9609)),),
 //           centerTitle: true ,title: const Text("Legal" ,style: TextStyle(color: Colors.white),),
 
-      
 //       ),
 //       body: ListView.builder(
 //         padding: const EdgeInsets.all(25),
-        
+
 //           itemBuilder: (BuildContext context, int index) => EntryItem(data[index]),
 //           itemCount: data.length,
 //         ),
@@ -99,7 +98,6 @@ class Help extends StatelessWidget {
 //   ),
 // ];
 
-
 // // Displays one Entry. If the entry has children then it's displayed
 // // with an ExpansionTile.
 // class EntryItem extends StatelessWidget {
@@ -126,4 +124,3 @@ class Help extends StatelessWidget {
 // void main() {
 //   runApp(Legal());
 // }
-
