@@ -1,4 +1,4 @@
- // App Design and Code Author: Raymond Colin Turner
+// App Design and Code Author: Raymond Colin Turner
 // Lead Developer/Software Engineer: Raymond Colin Turner.
 // Copyright © 2020 Ellatronix Ltd.
 
@@ -8,6 +8,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:tailored_scaffolding/widgets/image_input.dart';
+//import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
 //import 'package:tailored_scaffolding/widgets/image.dart';
 import '../widgets/main_drawer.dart';
 //import '../widgets/image_picker.dart';
