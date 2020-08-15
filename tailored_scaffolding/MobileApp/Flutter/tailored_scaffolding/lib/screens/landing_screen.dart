@@ -1,5 +1,5 @@
 // App Design and Code Author: Raymond Colin Turner
-// Lead Developer/Software Engineer: Raymond Colin Turner.
+// Lead Developer: Raymond Colin Turner.
 // Copyright © 2020 Ellatronix Ltd.
 
 // ** Start of Root Code ** //
@@ -8,8 +8,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:tailored_scaffolding/widgets/image_input.dart';
-//import 'package:tailored_scaffolding/widgets/image.dart';
 import '../widgets/main_drawer.dart';
+//import 'package:tailored_scaffolding/widgets/image.dart';
 //import '../widgets/image_picker.dart';
 //import 'dart:io';
 //import 'dart:async';
@@ -61,34 +61,12 @@ class _LandingScreenState extends State<LandingScreen> {
       endDrawer: AppDrawer(),
       //------------------------------ Top App Bar --------------------------------//
       appBar: AppBar(
-        //centerTitle: true ,title: const Text("Quick Quote" ,style: TextStyle(color: Color(0xff283961)),),
         centerTitle: true,
         title: const Text(
           "Quick Quote",
           style: TextStyle(color: Colors.white),
         ),
       ),
-      // floatingActionButton: FloatingActionButton(
-      // onPressed:() {
-
-      // },
-      // child: Icon(Icons.add_a_photo,color: Colors.black,),
-      // //backgroundColor: Colors.orange,
-      // backgroundColor: Color(0xffFFCE00),
-
-      // ),
-      // floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      //       ),
-      //     );
-      //   }
-
-      //   Future imagepicker() async {
-      //     var image = await ImagePicker.pickImage(source: ImageSource.gallery);
-      //     setState(() {
-      //       _image = image;
-      //     });
-      //   }
-      // }
 
       backgroundColor: Colors.white,
       body: new Center(

@@ -40,7 +40,7 @@ class AppDrawer extends StatelessWidget {
               padding: const EdgeInsets.all(2.0),
               child: UserAccountsDrawerHeader(
                 accountName: Text(
-                  'Jason Bacon / Terry Crump',
+                  'Jason Bacon',
                   style: TextStyle(color: Colors.white),
                 ),
                 accountEmail: const Text(

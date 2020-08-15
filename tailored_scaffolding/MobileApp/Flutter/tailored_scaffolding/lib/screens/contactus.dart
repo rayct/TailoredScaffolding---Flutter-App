@@ -92,27 +92,27 @@ class ContactUs extends StatelessWidget {
                 },
               ),
               // Terry's Phone Number
-              ListTile(
-                leading: Icon(Icons.phone_in_talk),
-                selected: false,
-                title: Text(
-                  "Call Terry",
-                  style: TextStyle(
-                      letterSpacing: 0.0, fontSize: 16.0, color: Colors.black),
-                ),
-                onTap: () async {
-                  String telephoneUrl = "tel:$terrysNumber";
+              // ListTile(
+              //   leading: Icon(Icons.phone_in_talk),
+              //   selected: false,
+              //   title: Text(
+              //     "Call Terry",
+              //     style: TextStyle(
+              //         letterSpacing: 0.0, fontSize: 16.0, color: Colors.black),
+              //   ),
+              //   onTap: () async {
+              //     String telephoneUrl = "tel:$terrysNumber";
 
-                  if (await canLaunch(telephoneUrl)) {
-                    await launch(telephoneUrl);
-                  } else {
-                    throw "Can't phone that number.";
-                  }
-                },
-              ),
+              //     if (await canLaunch(telephoneUrl)) {
+              //       await launch(telephoneUrl);
+              //     } else {
+              //       throw "Can't phone that number.";
+              //     }
+              //   },
+              // ),
               // Website Address
               ListTile(
-                leading: Icon(Icons.web),
+                leading: Icon(Icons.web_asset),
                 selected: false,
                 title: Text(
                   "Website",
@@ -186,24 +186,24 @@ class ContactUs extends StatelessWidget {
                     }
                   }),
               // SMS Terry
-              ListTile(
-                  leading: Icon(FontAwesomeIcons.sms),
-                  selected: false,
-                  title: Text(
-                    "SMS Terry",
-                    style: TextStyle(
-                        letterSpacing: 0.0,
-                        fontSize: 16.0,
-                        color: Colors.black),
-                  ),
-                  onTap: () async {
-                    const phonenumber = "sms:07944136117";
-                    if (await canLaunch(phonenumber)) {
-                      await launch(phonenumber);
-                    } else {
-                      throw 'Could not Send Text Message';
-                    }
-                  })
+              // ListTile(
+              //     leading: Icon(FontAwesomeIcons.sms),
+              //     selected: false,
+              //     title: Text(
+              //       "SMS Terry",
+              //       style: TextStyle(
+              //           letterSpacing: 0.0,
+              //           fontSize: 16.0,
+              //           color: Colors.black),
+              //     ),
+              //     onTap: () async {
+              //       const phonenumber = "sms:07944136117";
+              //       if (await canLaunch(phonenumber)) {
+              //         await launch(phonenumber);
+              //       } else {
+              //         throw 'Could not Send Text Message';
+              //       }
+              //     })
             ]),
       ),
     );
