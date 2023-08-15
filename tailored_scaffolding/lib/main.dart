@@ -1,6 +1,6 @@
-// App Design and Code Author: Raymond Colin Turner
-// Lead Developer/Software Engineer: Raymond Colin Turner.
-// Copyright © 2020: Ellatronix Ltd.
+// App Design and Code Author: Raymond C. TURNER
+// Lead Developer/Software Engineer: Raymond C. TURNER
+// Copyright © 2020: Ellatronix Ltd and Codestak.io.
 
 // ** Start of Root Code ** //
 
